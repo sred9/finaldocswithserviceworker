@@ -35,7 +35,7 @@ exports.onRenderBody = function (_ref, _ref2) {
   setPostBodyComponents([_react["default"].createElement("script", {
     key: "plugin-docsearch-js",
     type: "text/javascript",
-    src: "/docsearch.min.js"
+    src: "https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
   }), _react["default"].createElement("script", {
     key: "plugin-docsearch-initiate",
     type: "text/javascript",

@@ -8,7 +8,6 @@
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2rem;
   display: flex;
 }
 
@@ -46,7 +45,7 @@
 
 .article__inner {
   max-width: 800px;
-  width: 100%!important;
+  width: 100%;
   background-color: var(--articleBackground);
   display: flex;
   flex-direction: column;
@@ -74,15 +73,3 @@
   
 }
 }
-@media (min-width: 320px) and (max-width: 480px) {
-  
-body.dark{
-.article__inner{
-border: 1px solid #181818;
-}
-}
-
- 
-}
-
-

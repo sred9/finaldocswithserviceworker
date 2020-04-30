@@ -41,9 +41,7 @@ export default class ToC extends React.Component {
             </div>
           </div>
         </div>
-		
       </div>
-	  
     );
   }
 }

@@ -66,16 +66,8 @@ $sidebar-tablet-width: 160px;
   list-style: none;
   line-height: 24px;
   padding: 0;
-  margin: 12px 0;
+  margin: 4px 0;
   word-break: break-word;
-  a{
-	text-decoration: none;
-	color: var(--textNormal);
-	
-	&:hover	{
-	color: var(--linkNormal);
-	}
-  }
 }
 
 .sidebar__link {
@@ -90,7 +82,6 @@ $sidebar-tablet-width: 160px;
   &--active {
     color: var(--linkNormal);
     position: relative;
-	
 
     &::before {
       content: "";
@@ -135,12 +126,3 @@ $sidebar-tablet-width: 160px;
 color: var(--textNormal);
 }
 
-
-
-ul#visible{
-display: block;
-}
-
-h3#visible{
-color: var(--linkNormal);
-}

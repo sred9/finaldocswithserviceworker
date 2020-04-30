@@ -38,7 +38,7 @@ class IndexRoute extends React.Component {
               {allLetters.map((letter, index) => {
                 return (
                   <div className="sidebar__section" key={index}>
-                    <h3 className="sidebar__title sidebar__title--active">
+                    <h3 className="sidebar__top sidebar__title sidebar__title--active">
                       {letter}
                     </h3>
                     <ul className="sidebar__items sidebar__items--active">

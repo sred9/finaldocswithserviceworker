@@ -7,6 +7,7 @@ exports.createPages = ({ graphql, actions }) => {
   const hackersTemplate = path.resolve('./src/templates/hackers.js');
   const htmlTemplate = path.resolve('./src/templates/html.js');
   const bootstrapTemplate = path.resolve('./src/templates/bootstrap.js');
+  const materialTemplate = path.resolve('./src/templates/material.js');
   const changelogTemplate = path.resolve('./src/templates/changelog.js');
   const glossaryTemplate = path.resolve('./src/templates/glossary.js');
   const accessibilityTemplate = path.resolve('./src/templates/accessibility.js');
@@ -49,6 +50,9 @@ exports.createPages = ({ graphql, actions }) => {
         template = glossaryTemplate;
       } else if (node.frontmatter.path.includes("/accessibility")) {
         template = accessibilityTemplate;
+      }
+	  else if (node.frontmatter.path.includes("/material")) {
+        template = materialTemplate;
       }
 
       createPage({

@@ -10,7 +10,7 @@ const Section = props => {
 
   return (
     <div className="sidebar__section">
-      <h3 className={titleClasses} onClick={props.onSectionTitleClick}>
+      <h3 className={titleClasses}  id={props.id} onClick={props.onSectionTitleClick}>
         {props.title}
       </h3>
       <SectionLinks {...props} title={props.title} />
@@ -24,7 +24,7 @@ const SectionLinks = props => {
   });
 
   return (
-    <ul className={classes}>
+    <ul className={classes} id={props.id}>
       {props.items.map((item, index) => (
         <SectionLink
           node={item}
@@ -52,7 +52,7 @@ const SectionLink = props => {
   });
 
   return (
-    <li className="sidebar__item" key={item.title}>
+    <li className="sidebar__item" id={item.component} key={item.title}>
       {item.path ? (
         <Link
           to={item.path}

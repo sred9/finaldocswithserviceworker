@@ -5,6 +5,7 @@ import Article from "../../components/article/article";
 
 import htmlNav from "./html-nav.yaml";
 import bootstrapNav from "./bootstrap-nav.yaml";
+import materialNav from "./material-nav.yaml";
 
 class IndexRoute extends React.Component {
   render() {

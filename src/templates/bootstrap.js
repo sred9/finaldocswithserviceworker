@@ -17,8 +17,10 @@ export default function Template({ data }) {
       description={markdownRemark.frontmatter.description}
       docOnGithub={`${markdownRemark.frontmatter.id}.md`}
     >
-      <h1>{markdownRemark.frontmatter.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+      <div class="hero-single">
+	  <h1 class="title">{markdownRemark.frontmatter.title}</h1>
+      </div>
+	  <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
     </Article>
   );
 }

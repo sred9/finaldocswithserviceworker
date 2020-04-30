@@ -1,0 +1,158 @@
+code[class*=language-],
+pre[class*=language-] {
+	color: #000;
+	background: 0 0;
+	text-shadow: 0 1px #fff;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none
+}
+
+code[class*=language-] ::-moz-selection,
+code[class*=language-]::-moz-selection,
+pre[class*=language-] ::-moz-selection,
+pre[class*=language-]::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc
+}
+
+code[class*=language-] ::selection,
+code[class*=language-]::selection,
+pre[class*=language-] ::selection,
+pre[class*=language-]::selection {
+	text-shadow: none;
+	background: #b3d4fc
+}
+
+@media print {
+	code[class*=language-],
+	pre[class*=language-] {
+		text-shadow: none
+	}
+}
+
+pre[class*=language-] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto
+}
+
+:not(pre)>code[class*=language-],
+pre[class*=language-] {
+	background: #f5f2f0
+}
+
+:not(pre)>code[class*=language-] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal
+}
+
+
+
+
+
+
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: var(--prism-comment);
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol {
+	color: var(--prism-property);
+}
+
+.token.punctuation {
+	color: var(--prism-punctuation); 
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.function,
+.token.builtin {
+	color: var(--prism-selector);  
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.class-name {
+	color: var(--prism-atrule);  
+}
+
+.token.inserted {
+	color: var(--prism-inserted); 
+}
+
+.token.deleted {
+	color: var(--prism-deleted);
+}
+
+.token.regex,
+.token.important {
+	color: var(--prism-regex); 
+}
+
+.language-css .token.string,
+.style .token.string {
+	color: var(--prism-string); 
+}
+
+.token.important {
+	font-weight: 400;
+}
+
+.token.bold {
+	font-weight: 700;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.token-line>span.token:empty::after {
+	min-height: 1em;
+	display: inline-block;
+	content: "";
+}
+
+.namespace {
+	opacity: 0.7;
+}
+
+.token.tab:not(:empty):before,
+.token.cr:before,
+.token.lf:before {
+	color: var(--prism-empty); 
+}
+
+
+/*# sourceMappingURL=prism.min.css.map */

@@ -15,13 +15,14 @@
 
 .search__input {
   appearance: none;
-  background: $daisy-white;
+  background: var(--searchBackground);
+  color: var(--searchColor);	
   border: 0;
   border-radius: 4px;
   font-size: 16px;
   font-weight: 400;
   font-family: inherit;
   position: relative;
-  padding: 8px 16px;
+  padding: 5.5px 16px;
   width: 160px;
 }

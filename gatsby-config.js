@@ -3,6 +3,7 @@ module.exports = {
     title: 'HackerOne Platform Documentation',
     siteUrl: 'https://docs.hackerone.com',
     description: 'Get instant answers to the most common questions and learn how to use HackerOne.',
+	author: 'sreehas',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -11,24 +12,12 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-layout',
-	`gatsby-plugin-catch-links`,
-	
+	'gatsby-plugin-catch-links',
+	'gatsby-plugin-dark-mode',
+    'gatsby-plugin-optimize-svgs',
+	`gatsby-plugin-offline`,
 
- {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
-        start_url: `/`,
-        background_color: `#6b37bf`,
-        theme_color: `#6b37bf`,
-        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
-        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
-        display: `standalone`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
-      },
-    },
-    `gatsby-plugin-offline`,		
+		
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -36,6 +25,13 @@ module.exports = {
         name: "docs",
       },
     },
+	
+	{
+  resolve: `gatsby-plugin-offline`,
+  options: {
+    precachePages: [`/`, `/html.html`],
+  },
+},
     {
       resolve: 'gatsby-plugin-sri',
       options: {
@@ -50,9 +46,9 @@ module.exports = {
         mergeStyleHashes: false,
         mergeDefaultDirectives: true,
         directives: {
-          "script-src": "'self' 'unsafe-eval' 'unsafe-inline' www.google-analytics.com cdn.jsdelivr.net *.algolia.net *.algolianet.com",
-          "style-src": "'self' 'unsafe-inline' cdn.jsdelivr.net",
-          "connect-src": "'self' www.google-analytics.com fbhzv4f2nk7b.statuspage.io *.algolia.net *.algolianet.com",
+          "script-src": "'self' 'unsafe-eval' 'unsafe-inline' www.google-analytics.com cdn.jsdelivr.net *.algolia.net *.algolianet.com *.cloudfront.net",
+          "style-src": "'self' 'unsafe-inline' cdn.jsdelivr.net *.cloudfront.net",	
+          "connect-src": "'self' www.google-analytics.com fbhzv4f2nk7b.statuspage.io *.algolia.net *.algolianet.com *.cloudfront.net",
           "frame-src": "www.youtube-nocookie.com"
         }
       }
@@ -72,6 +68,35 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+		/*'gatsby-remark-code-buttons',
+		{
+          resolve: 'gatsby-remark-code-buttons',
+          options: {
+            // Optional button container class name. Defaults
+            // to 'gatsby-code-button-container'.
+            buttonContainerClass: `bingo`,
+            // Optional button class name. Defaults to 'gatsby-code-button'.
+            buttonClass: `customButtonClass`,
+            // Optional button text. Defaults to ''.
+            buttonText: `Copy`,
+            // Optional svg icon class name. Defaults to 'gatsby-code-button-icon'.
+            svgIconClass: `customSvgIconClass`,
+            // Optional svg icon. Defaults to svg string and can be
+            // replaced with any other valid svg. Use custom classes
+            // in the svg string and skip `iconClass` option.
+            svgIcon: ``,
+            // Optional tooltip text. Defaults to ''.
+            tooltipText: ``,
+            // Optional toaster class name. Defaults to ''.
+            toasterClass: `customToasterClass`,
+            // Optional toaster text class name. Defaults to ''.
+            toasterTextClass: `customToasterTextClass`,
+            // Optional toaster text. Defaults to ''.
+            toasterText: 'customToasterText',
+            // Optional toaster duration. Defaults to 3500.
+            toasterDuration: 5000
+          },
+        },*/
           {
             resolve: 'gatsby-remark-autolink-headers',
             options: {
@@ -149,6 +174,7 @@ module.exports = {
             escapeEntities: {},
           },
         },
+			
         ],
       },
     },
@@ -208,11 +234,12 @@ module.exports = {
     },
 	},
     {
-      resolve: 'gatsby-plugin-algolia-docsearch',
+      resolve: 'gatsby-plugin-algolia-docsearch-custom',
       options: {
         apiKey: "acfb7def12803db2cd4ac0539b2b571a",
         indexName: "hackerone",
         inputSelector: "#algolia-doc-search",
+		debug: true,
       },
     },
 	{
@@ -221,19 +248,61 @@ module.exports = {
       siteUrl: `csspoints.net`,
     },
   },
-  {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
-        start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
-        display: `standalone`,
-		
-      },
+  
+  /*{
+  resolve: 'gatsby-remark-code-repls',
+  options: {
+    // Optional default link text.
+    // Defaults to "REPL".
+    // e.g. <a href="...">Click here</a>
+    defaultText: 'Click here',
+
+
+    // Example code links are relative to this dir.
+    // e.g. examples/path/to/file.js
+    directory: `${__dirname}/examples/`,
+
+    // Optional link target.
+    // Note that if a target is specified, "noreferrer" will also be added.
+    // e.g. <a href="..." target="_blank" rel="noreferrer">...</a>
+    target: '_blank',
+
+
+    // Provider specific options
+    codepen: {
+      // Optional path to a custom redirect template.
+      // The redirect page is only shown briefly,
+      // But you can use this setting to override its CSS styling.
+      // redirectTemplate: `${__dirname}/src/redirect-template.js`,
+
+      // Optional HTML contents to inject into REPL.
+      // Defaults to `<div id="root"></div>`.
+      // e.g. '<div id="root"></div>'
+      html: '',
+
+      // Optional externals to load from a CDN.
+      // e.g. '//unpkg.com/react/umd/react.development.js'
+      externals: [],
+
+      // Include CSS with matching name.
+      // If set to `true`, when specifying `file1.js` as example file,
+      // it will try to inject the CSS in `file1.css` if the file exists,
+      // otherwise the default behaviour is preserved
+      includeMatchingCSS: false,
     },
 
+    codesandbox: {
+      // Optional HTML contents to inject into REPL.
+      // Defaults to `<div id="root"></div>`.
+      // e.g. '<div id="root"></div>'
+      html: '',
 
+      // Optional runtime dependencies to load from NPM.
+      // e.g. ['react', 'react-dom'] or ['react@15', 'react-dom@15']
+      dependencies: [],
+    }
+  },
+},*/	
+  
   ],
 };

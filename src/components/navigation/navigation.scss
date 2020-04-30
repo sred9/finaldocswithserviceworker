@@ -12,16 +12,16 @@
 
 .navigation__link {
   display: inline-block;
-  padding: 0 16px;
+  padding: 3px 16px;
   border-bottom: 3px solid transparent;
   /*line-height: 48px;*/
-  line-height: 40px;
-  color: $daisy-white;
+  line-height: auto;
+  color: var(--navText);
   text-decoration: none;
 
   &:hover {
     text-decoration: none;
-    color: $daisy-pink;
+    color: $lime-green	;
   }
 
   &--active {
@@ -32,6 +32,8 @@
 
     &:hover {
       color: $daisy-white;
+	  transform: translateY(-1px);
+	  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     }
   }
 }
@@ -80,3 +82,24 @@
     flex-grow: 1;
   }
 }
+
+
+
+li.navigation__item.dark-toggle {
+margin-top: 6px;
+
+} 
+
+li.navigation__item.dark-toggle label.dark-toggle:hover{
+cursor: pointer;
+} 
+
+li.navigation__item.dark-toggle label.dark-toggle svg{
+fill: var(--darkToggle);
+}
+li.navigation__item.dark-toggle label.dark-toggle:hover svg{
+fill: $lime-green;
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}  
+
+

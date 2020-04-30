@@ -9,9 +9,10 @@
 }
 
 .footer__inner {
-  border-top: 1px solid $daisy-whisper;
+  border-top: 1px solid var(--border);
   padding: 16px 0;
-  font-size: 14px;
+  margin-top: 1rem;
+  font-size: 17px;
   line-height: 20px;
-  color: $daisy-nobel;
+  color: var(--textNormal);
 }

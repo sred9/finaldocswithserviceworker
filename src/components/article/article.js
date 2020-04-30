@@ -81,9 +81,9 @@ class IndexRoute extends React.Component {
   }
 
   render() {
-    const { links, path, title, children, description, headings } = this.props;
+    const { links, path, title, children, description, headings, imagepath } = this.props;
     const githubRepo =
-      "https://github.com/Hacker0x01/docs.hackerone.com/blob/master/docs/";
+      "https://github.com/sred9/thiscouldbefinaldocs/tree/master/docs/";
 
     const globalWindow =
       typeof window !== "undefined"
@@ -92,6 +92,41 @@ class IndexRoute extends React.Component {
 
     return (
       <div className="article">
+
+
+
+
+		
+		
+		<Helmet>
+ 
+	 
+  
+	  <meta property="og:locale" content="en_US"/>
+      <meta property="og:type" content="article"/>
+      <meta property="og:title" content={`${title} | ${GatsbyConfig.siteMetadata.title}`}/>
+      <meta property="og:description" content={description}/>
+      <meta property="og:url" content={`${GatsbyConfig.siteMetadata.siteUrl}${path}`}/>
+      <meta property="og:image" content={imagepath}/>
+     
+      <meta name="twitter:card" content="summary_large_image"/>
+      <meta name="twitter:description" content={description}/>
+      <meta name="twitter:title" content={`${title} | ${GatsbyConfig.siteMetadata.title}`}/>
+      <meta name="twitter:site" content={GatsbyConfig.siteMetadata.title}/>
+      <meta name="twitter:image" content={imagepath}/>
+      <meta name="twitter:creator" content={GatsbyConfig.siteMetadata.author}/>
+	 
+	  
+	  
+	  
+     
+                </Helmet>
+		
+		
+		
+		
+		
+		
         <Helmet
           title={`${title} | ${GatsbyConfig.siteMetadata.title}`}
           meta={[
@@ -100,7 +135,9 @@ class IndexRoute extends React.Component {
                   name: "description",
                   content: description
                 }
+				
               : {}
+
           ]}
         />
         <Sidebar
@@ -119,7 +156,7 @@ class IndexRoute extends React.Component {
                 <div className="footer-column footer-column--left">
                   <div className="footer-column-block">
                     <a href={githubRepo + this.props.docOnGithub}>
-                      Edit this page on GitHub
+                      Improve this article
                     </a>
                   </div>
                 </div>
@@ -163,7 +200,10 @@ class IndexRoute extends React.Component {
         </article>
 
         <ToC headings={headings} />
+		
       </div>
+	  
+	  
     );
   }
 }

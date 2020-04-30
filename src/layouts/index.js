@@ -11,41 +11,17 @@ import "../css/main.scss";
 
 const TemplateWrapper = ({ children }) => (
   <div>
-  
-    <Helmet
-      defaultTitle={GatsbyConfig.siteMetadata.title}
-      meta={[
-        {
-          name: "description",
-          content: GatsbyConfig.siteMetadata.description
-        },
-        {
-          name: "og:type",
-          content: "website"
-        },
-        {
-          name: "og:site_name",
-          content: GatsbyConfig.siteMetadata.title
-        },
-        {
-          name: "twitter:card",
-          content: "summary_large_image"
-        },
-        {
-          name: "twitter:creator",
-          content: "@Hacker0x01"
-        },
-        {
-          name: "twitter:site",
-          content: "@Hacker0x01"
-        }
-      ]}
-      htmlAttributes={{ lang: "en" }}
-    />
+            
+    
+	
     <Header />
     <div className="wrapper">{children}</div>
   </div>
 );
+
+
+
+
 
 TemplateWrapper.propTypes = {
   children: PropTypes.object

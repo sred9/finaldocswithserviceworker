@@ -17,6 +17,7 @@
     - title: Using Markdown
       path: /programs/using-markdown.html
 - title: Your Program
+  id: visible
   items:
     - title: General Settings
       path: /programs/general-settings.html

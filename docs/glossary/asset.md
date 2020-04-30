@@ -1,5 +1,5 @@
 ---
-title: "Asset"
+title: "<abbr> Tag"
 path: "/glossary/asset"
 ---
 

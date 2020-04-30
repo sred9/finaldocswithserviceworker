@@ -1,4 +1,51 @@
-- title: Accessibility
+- title: Basic
+  id: visible
   items:
-    - title: VPAT
+    - title: HTML
+      path: /accessibility/vpat.html
+    - title: CSS
+      path: /accessibility/vpat.html
+    - title: Javascript
+      path: /accessibility/vpat.html
+- title: Frontend
+  id: visible
+  items:
+    - title: Bootstrap
+      path: /accessibility/vpat.html
+    - title: Foundation
+      path: /accessibility/vpat.html
+    - title: Materialize 
+      path: /accessibility/vpat.html
+    - title: Tailwind CSS
+      path: /accessibility/vpat.html
+- title: Backend
+  id: visible
+  items:
+    - title: PHP
+      path: /accessibility/vpat.html
+    - title: Node
+      path: /accessibility/vpat.html
+    - title: Ruby    
+      path: /accessibility/vpat.html
+- title: Javascript
+  id: visible
+  items:
+    - title: React
+      path: /accessibility/vpat.html
+    - title: Angular
+      path: /accessibility/vpat.html
+    - title: Ember.js 
+      path: /accessibility/vpat.html
+    - title: Vue.js
+      path: /accessibility/vpat.html
+- title: Database
+  id: visible
+  items:
+    - title: MySQL
+      path: /accessibility/vpat.html
+    - title: MongoDB
+      path: /accessibility/vpat.html
+    - title: PostgreSQL
+      path: /accessibility/vpat.html
+    - title: MariaDB
       path: /accessibility/vpat.html

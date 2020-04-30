@@ -52,8 +52,8 @@ class Search extends React.Component {
           className="search__input"
           id="algolia-doc-search"
           type="search"
-          placeholder="Search docs"
-          aria-label="Search docs"
+          placeholder="Search articles"
+          aria-label="Search articles"
         />
 
       </form>

@@ -1,9 +1,11 @@
 ---
-title: "HackerOne Platform Accessibility Conformance Report Revised Section 508 Edition"
+title: "We're Looking for Content Collaborators"
 path: "/accessibility/vpat.html"
 id: "accessibility/vpat"
 bookIndexFor: "accessibility"
 ---
+
+Hey guys! Scotch.io is growing fast and we’re looking for collaborators to write some awesome software development posts.
 
 **VPAT® Version 2.3 (Revised) – April 2019**
 

@@ -1,5 +1,5 @@
 ---
-title: "Bounty"
+title: "<b> Tag"
 path: "/glossary/bounty"
 ---
 

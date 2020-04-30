@@ -15,6 +15,7 @@ export default function Template({ data }) {
       title={markdownRemark.frontmatter.title}
       headings={markdownRemark.headings}
       description={markdownRemark.frontmatter.description}
+	  imagepath={markdownRemark.frontmatter.imagepath}
       docOnGithub={`${markdownRemark.frontmatter.id}.md`}
     >
       <h1>{markdownRemark.frontmatter.title}</h1>
@@ -32,8 +33,9 @@ export const pageQuery = graphql`
         id
         path
         description
+		imagepath
       }
-      headings(depth: h3) {
+      headings(depth: h2) {
         value
       }
     }

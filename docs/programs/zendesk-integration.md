@@ -1,30 +1,65 @@
 ---
-title: "Zendesk Integration"
-path: "/programs/zendesk-integration.html"
-id: "programs/zendesk-integration"
+title: "HTML <abbr> Tag"
+path: "/programs/html-abbr-tag.html"
+id: "programs/html-abbr-tag"
 ---
 
-With the Zendesk integration, HackerOne makes it easy for you to track Zendesk issues as references on HackerOne.
+### Description
 
-In order to configure the Zendesk integration for your team, [contact HackerOne](https://support.hackerone.com/hc/en-us/requests/new) with the following information:  
+The `<abbr>` tag defines an abbreviated form of a longer word or phrase.
 
-* The base URL of the Zendesk instance (e.g. https://company.zendesk.com/)
-* Any other custom/specific fields you’d like pre-populated such as:
-  * locale_id
-  * set_tags
-  * via_id
-  * client
-  * submitted_from
-  * Ticket_from_search
+The following table summarizes the usages context and the version history of this tag.
 
-With all of the provided information, HackerOne will be able to set up your requested integration. You’ll get an email notification letting you know that your integration has been set up within 1-2 business days.
+<table style="width:100%">
+  <tr>
+    <th>Placement:</th>
+    <td>Inline</td>
+  </tr>
+  <tr>
+    <th>Content:</th>
+    <td>Inline, and text</td>
+  </tr>
+  <tr>
+    <th>Start/ End Tag:</th>
+    <td>Start tag: required , End tag: required</td>
+  </tr>
+    <tr>
+    <th>Version:</th>
+    <td>HTML 4, 4.01, 5</td>
+  </tr>
+</table>	
 
-### How the Integration Works
-After your Zendesk integration has been set up:
-1. Change the action picker to **Change state > Triaged** in your report.
+```html
+<a href="https://www.w3.org/">W3C Website</a>
+```
 
-![integrations](./images/integrations.png)
+### Syntax
 
-2. Click **Escalate**.
-3. You’ll be taken to your Zendesk account where the report is pre-populated. Submit the issue to create the report in Zendesk.
-4. Copy the Zendesk report issue number and paste it in the **Reference ID** field of the HackerOne report to create a direct reference link to the issue in Zendesk.  
+The basic syntax of the `<abbr>` tag is given with:
+
+```html
+HTML/XHTML: <abbr title="string"> ... </abbr>
+```
+
+The example below shows the `<abbr>` tag in action.
+
+```html
+<p>The <abbr title="Hyper Text Markup Language">HTML</abbr> is the publishing language of the World Wide Web.</p>
+```
+
+### Tag-Specific Attributes
+The `<abbr>` tag doesn't have any specific attribute.
+
+### Global Attributes
+
+Like all other HTML tags, the `<abbr>` tag supports the [global attributes in HTML5](https://www.tutorialrepublic.com/html-reference/html5-global-attributes.php).
+
+### Event Attributes
+
+The `<abbr>` tag also supports the [event attributes in HTML5](https://www.tutorialrepublic.com/html-reference/html5-event-attributes.php).
+
+### Browser Compatibility
+|  Element |<i class="chrome"></i>    | <i class="ie"></i>   | <i class="firefox"></i>   |  <i class="safari"></i>  | <i class="opera"></i>   |
+| ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
+| &lt;abbr&gt;  |Yes   |Yes   |Yes   |Yes   |Yes   |
+
